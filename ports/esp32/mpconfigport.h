@@ -205,6 +205,7 @@
 
 #if MICROPY_HW_ENABLE_USBDEV
 #define MICROPY_SCHEDULER_STATIC_NODES      (1)
+#define MICROPY_HW_ESP_AUTOMATIC_BOOTLOADER (1)
 
 // Enable USB-CDC serial port
 #ifndef MICROPY_HW_USB_CDC
@@ -291,7 +292,7 @@ void *esp_native_code_commit(void *, size_t, void *);
         extern void mp_handle_pending(bool); \
         mp_handle_pending(true); \
         MICROPY_PY_SOCKET_EVENTS_HANDLER \
-        MICROPY_HW_USBDEV_TASK_HOOK \
+            MICROPY_HW_USBDEV_TASK_HOOK \
         asm ("waiti 0"); \
     } while (0);
 #endif
