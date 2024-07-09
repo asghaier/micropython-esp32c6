@@ -8,7 +8,9 @@
 
 // Set to 1 to use internal flash, set to 0 to use external SPI flash
 // You also need to set the size of the flash later in this header
+#ifndef MICROPY_HW_ENABLE_INTERNAL_FLASH_STORAGE
 #define MICROPY_HW_ENABLE_INTERNAL_FLASH_STORAGE (1)
+#endif
 
 // some users having issues with FLASH_LATENCY_2, so set to 3
 // from https://forum.micropython.org/viewtopic.php?t=7154
@@ -93,7 +95,9 @@
 // 4MB => 32MBit
 // 8MB => 64MBit
 // 16MB => 128MBit
+#ifndef MICROPY_HW_SPIFLASH_SIZE_BITS
 #define MICROPY_HW_SPIFLASH_SIZE_BITS (128 * 1024 * 1024)
+#endif
 
 #if !MICROPY_HW_ENABLE_INTERNAL_FLASH_STORAGE
 

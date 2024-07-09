@@ -1,0 +1,18 @@
+{
+    "deploy": [
+        "../PYBV10/deploy.md"
+    ],
+    "docs": "",
+    "features": [],
+    "images": [
+        "WEACTV20_F411.jpg"
+    ],
+    "mcu": "stm32f411",
+    "product": "WeAct v2.0 'blackpill'",
+    "thumbnail": "",
+    "url": "https://stm32-base.org/boards/STM32F411CEU6-WeAct-Black-Pill-V2.0.html",
+    "variants": {
+        "FLASH_4MB": "SPI Flash 4MB"
+    },
+    "vendor": "WeAct Studio"
+}
